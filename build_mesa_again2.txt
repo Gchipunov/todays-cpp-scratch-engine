@@ -1,0 +1,23 @@
+//meson configure build/ -Dprefix=/tmp/install -Dglx=true
+C:\Users\PC-BBOX>H:
+
+H:\>cd mesa
+
+H:\mesa>cd mesa
+
+H:\mesa\mesa>cd ..
+
+H:\mesa>mkdir install
+
+H:\mesa>cd mesa
+
+H:\mesa\mesa>
+
+
+meson setup buildvs3 --backend=vs
+
+meson configure buildvs3/ --backend=vs -Dprefix=H:/mesa/install -Dglx=true  
+
+
+cd buildvs2
+msbuild mesa.sln /m
