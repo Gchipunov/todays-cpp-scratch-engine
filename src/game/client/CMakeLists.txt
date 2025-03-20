@@ -13,12 +13,12 @@ set(IMGUI_SOURCES
 )
 
 # Add your DLL source
-add_library(ImGuiDLL SHARED
+add_library(IntMainClientDLL SHARED
     dllmain.c
     ${IMGUI_SOURCES}
 )
 
 # Include directories
-target_include_directories(ImGuiDLL PRIVATE
+target_include_directories(IntMainClientDLL PRIVATE
     ${CMAKE_SOURCE_DIR}/imgui
 )
