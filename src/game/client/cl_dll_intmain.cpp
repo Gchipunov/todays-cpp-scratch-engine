@@ -1,5 +1,5 @@
 // dllmain.c
-#include <windows.h>
+#include <windows.h>   // ADD POXIS and MACOS FIXME
 #include <stdint.h>
 #define IMGUI_DEFINE_MATH_OPERATORS
 #include "imgui.h"
@@ -43,7 +43,7 @@ struct DemoState {
 static DemoState g_state = { true, {0.45f, 0.55f, 0.60f, 1.00f}, 0 };
 
 // Exported function to initialize ImGui context
-__declspec(dllexport) void InitImGui() {
+__declspec(dllexport) void InitIntMainClient() {
     // Initialize ImGui context if needed
     ImGui::CreateContext();
     ImGuiIO& io = ImGui::GetIO();
@@ -75,7 +75,7 @@ __declspec(dllexport) void RenderUI() {
 }
 
 // Exported function to cleanup
-__declspec(dllexport) void ShutdownImGui() {
+__declspec(dllexport) void ShutdownIntMainClient() {
     ImGui::DestroyContext();
 }
 
